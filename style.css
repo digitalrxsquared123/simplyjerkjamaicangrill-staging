@@ -777,6 +777,53 @@ div.sj-patty-pic {
 }
 
 
+/* ======================
+   Sticky Nav Top Offset
+   Accounts for header height
+   at each breakpoint
+   ====================== */
+
+/* Desktop default — header 222px */
+:root {
+    --sj-nav-top: 222px;
+}
+
+/* Tablet — header 203px */
+@media (max-width: 768px) {
+    :root {
+        --sj-nav-top: 203px;
+    }
+}
+
+/* Mobile — header 260px */
+@media (max-width: 480px) {
+    :root {
+        --sj-nav-top: 260px;
+    }
+}
+
+/* Logged in desktop — add admin bar 32px */
+body.admin-bar {
+    --sj-nav-top: calc(222px + 32px);
+}
+
+/* Logged in tablet */
+@media (max-width: 768px) {
+    body.admin-bar {
+        --sj-nav-top: calc(203px + 32px);
+    }
+}
+
+/* Logged in mobile — admin bar is 46px */
+@media (max-width: 480px) {
+    body.admin-bar {
+        --sj-nav-top: calc(260px + 46px);
+    }
+}
+
+
+
+
 
 /* ======================
    Menu Page Navigation
@@ -786,7 +833,7 @@ div.sj-patty-pic {
 .sj-menu-nav {
     position: sticky;
     position: -webkit-sticky; /* Safari fix */
-    top: 0px;
+    top: var(--sj-nav-top);
     z-index: 100;
     background-color: #FFFFFF;
     border-bottom: 2px solid var(--wp--preset--color--sj-green);
