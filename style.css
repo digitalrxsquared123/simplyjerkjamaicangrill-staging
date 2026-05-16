@@ -1,0 +1,1109 @@
+/*
+Theme Name: Ollie Child
+Theme URI: https://simplyjerkjamaicangrill.com
+Description: Simply Jerk Jamaican Grill child theme based on Ollie
+Author: KSM Consulting
+Author URI: https://ksmconsulting.org
+Template: ollie
+Version: 1.0.0
+Requires at least: 6.4
+Tested up to: 6.7
+Requires PHP: 7.4
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: simply-jerk-theme
+*/
+
+/***********************NAVIGATION***************************/
+
+
+.wp-block-navigation-item:hover .wp-block-navigation-item__content {
+    border-top: 4px solid var(--wp--preset--color--sj-green);
+    padding-top: calc(0.5em - 4px);
+}
+
+.wp-block-navigation-item .wp-block-navigation-item__content {
+    border-top: 4px solid transparent;
+    padding-top: 0.5em;
+    transition: border-top-color 0.2s ease;
+}
+
+.wp-block-navigation-item.current-menu-item .wp-block-navigation-item__content {
+    border-top: 4px solid var(--wp--preset--color--sj-green);
+    padding-top: calc(0.5em - 4px);
+}
+
+/************Header menu styling**************/
+
+#modal-1-content > ul.wp-block-navigation__container {
+    column-gap: 1.5em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+/*****************Styling MetaSlider**************************/
+
+#metaslider_47 > ul.slides > li > div.caption-wrap {
+    display: flex;
+    justify-content: center;
+}
+
+#metaslider_47 > ul.slides > li > div > div > div > div {
+    text-align: center;
+}
+
+#metaslider_47 > ul.slides > li > img {
+    width: 50%;
+    margin: 0 auto;
+}
+
+
+/******************************Styling Dynamic hours display in the header *******************************************/
+#sj-hours {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--wp--preset--font-family--secondary);
+    font-size: var(--wp--preset--font-size--small);
+}
+
+.sj-hours-today {
+    color: var(--wp--preset--color--sj-dark);
+}
+
+.sj-hours-status {
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.sj-open {
+    color: var(--wp--preset--color--sj-green);
+}
+
+.sj-closed {
+    color: #CC0000;
+}
+
+
+
+/************** =========================================================================
+   Styling Header Contact Info
+   ======================================================================== ************/
+
+.sj-contact-info {
+    display: flex;
+    align-items: center;
+}
+
+.sj-contact-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.sj-contact-item {
+    display: flex;
+    align-items: center;
+}
+
+.sj-contact-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: var(--wp--preset--color--sj-dark) !important;
+    font-family: var(--wp--preset--font-family--secondary);
+    font-size: var(--wp--preset--font-size--small);
+    transition: color 0.2s ease;
+}
+
+.sj-contact-link:hover {
+    color: var(--wp--preset--color--sj-green) !important;
+    text-decoration: none;
+}
+
+.sj-contact-icon {
+    font-size: 16px;
+    width: 16px;
+    height: 16px;
+    color: var(--wp--preset--color--sj-green);
+    flex-shrink: 0;
+}
+
+.sj-contact-text {
+    line-height: 1.4;
+}
+
+/* Mobile — hide address on small screens */
+@media (max-width: 600px) {
+    .sj-contact-list {
+        flex-direction: column;
+    }
+    
+    /* .sj-contact-item:last-child {
+        display: none;
+    } */
+}
+
+/****************Stacking addresss details in header****************/
+
+div.sj-contact-block {
+    display: flex;
+    flex-direction: column;
+}
+
+span.sj-contact-text {
+    display: block;
+}
+
+ul.sj-contact-list {
+    row-gap: 8px;
+}
+
+div.sj-contact-block {
+    row-gap: 8px;
+}
+
+
+/**********************Header center group - heading and nav stacked *****************************/
+.sj-header-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    flex: 1;
+}
+
+.sj-header-center .wp-block-heading {
+    margin: 0;
+    text-align: center;
+}
+
+.sj-header-center .wp-block-navigation {
+    margin: 0;
+}
+
+/****************Space below metaslider block in footer*******************/
+
+div#metaslider-id-47 {
+    padding-bottom: 0px;
+}
+
+
+
+/****************************************** Overlapping Sections Layout ********************/
+
+@media screen and (min-width: 769px) {
+
+    div.sj-overlap-section-2 > div.wp-block-column:nth-child(2) {
+    margin-top: -15%;
+}
+
+}
+
+
+/*****************Styling center box on signature, showpiece wide images*************************/
+
+div.sj-img-center-box {
+    width: 25%;
+    height: auto;
+}
+
+
+/* ======================
+   Box overlay styles
+   ====================== */
+
+/* Light box - matches Burrito Bowl style */
+.sj-box-light {
+    /* background-color: rgba(255, 255, 255, 0.85) !important; */
+    padding: var(--wp--preset--spacing--large);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+}
+
+/* Cream box - warmer tone */
+.sj-box-cream {
+    background-color: rgba(245, 240, 230, 0.90);
+    padding: var(--wp--preset--spacing--large);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+}
+
+/* Dark box - for light backgrounds */
+.sj-box-dark {
+    background-color: rgba(26, 26, 26, 0.80);
+    padding: var(--wp--preset--spacing--large);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+}
+
+/* ======================
+   Gradient button styles
+   ====================== */
+
+/* Light gradient button - matches Burrito Bowl */
+.sj-btn-light {
+    background: linear-gradient(135deg, #F5F0E6, #EDE8DC) !important;
+    color: #1A1A1A !important;
+    border: 1px solid rgba(26, 26, 26, 0.15) !important;
+    font-family: var(--wp--preset--font-family--primary) !important;
+    font-weight: 600 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.1em !important;
+    padding: 0.8em 2em !important;
+    transition: all 0.3s ease !important;
+}
+
+.sj-btn-light:hover {
+    background: linear-gradient(135deg, #EDE8DC, #E0DAC8) !important;
+    border-color: rgba(26, 26, 26, 0.3) !important;
+}
+
+/* Green gradient button */
+.sj-btn-green {
+    background: linear-gradient(135deg, #006838, #00843D) !important;
+    color: #FFFFFF !important;
+    border: none !important;
+    font-family: var(--wp--preset--font-family--primary) !important;
+    font-weight: 600 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.1em !important;
+    padding: 0.8em 2em !important;
+    transition: all 0.3s ease !important;
+}
+
+.sj-btn-green:hover {
+    background: linear-gradient(135deg, #00843D, #009648) !important;
+}
+
+/* Dark gradient button */
+.sj-btn-dark {
+    background: linear-gradient(135deg, #1A1A1A, #2A2A2A) !important;
+    color: #FFFFFF !important;
+    border: none !important;
+    font-family: var(--wp--preset--font-family--primary) !important;
+    font-weight: 600 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.1em !important;
+    padding: 0.8em 2em !important;
+    transition: all 0.3s ease !important;
+}
+
+.sj-btn-dark:hover {
+    background: linear-gradient(135deg, #2A2A2A, #3A3A3A) !important;
+}
+
+
+/**********************************************Styling Home Page Slider***********************************************************/
+
+#metaslider_105 div.caption {
+    display: flex;
+    align-items: center;
+    padding-bottom: 20px !important;
+    font-size: 1.5em !important;
+    justify-content: center;
+}
+
+
+
+
+/* ======================
+   Slider overlay button
+   Injected into #metaslider-id-105
+   ====================== */
+
+/* Ensure slider is positioning context */
+#metaslider-id-105 {
+    position: relative !important;
+}
+
+/* Button wrapper inside slider commented out as this added via slider.js JS code dynamically*/
+/* #metaslider-id-105 .sj-slider-btn-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    z-index: 20;
+    margin: 0;
+    padding: 0;
+} */
+
+/* Button itself */
+#metaslider-id-105 .sj-slider-btn {
+    pointer-events: all;
+    display: inline-block;
+    font-family: var(--wp--preset--font-family--secondary);
+    font-size: var(--wp--preset--font-size--small);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    text-decoration: none;
+    color: #1A1A1A;
+    background: linear-gradient(
+        135deg,
+        rgba(245, 240, 230, 0.95),
+        rgba(237, 232, 220, 0.95)
+    );
+    padding: 1em 3em;
+    border: 1px solid rgba(26, 26, 26, 0.2);
+    border-radius: 2px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+}
+
+#metaslider-id-105 .sj-slider-btn:hover {
+    background: linear-gradient(
+        135deg,
+        rgba(237, 232, 220, 0.98),
+        rgba(224, 218, 200, 0.98)
+    );
+    border-color: rgba(26, 26, 26, 0.4);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transform: translateY(-1px);
+    color: #1A1A1A;
+    text-decoration: none;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    #metaslider-id-105 .sj-slider-btn {
+        font-size: 0.7rem;
+        padding: 0.7em 1.5em;
+        white-space: normal;
+        text-align: center;
+        max-width: 200px;
+    }
+}
+
+
+/*****************Remove errant p tag on home page******************/
+
+body.home #wp--skip-link--target > div.entry-content > p {
+    display: none;
+}
+
+
+/***************Remove top margin inside footer********************************/
+
+body.home .wp-block-group.alignfull.has-secondary-color.has-text-color.has-link-color.is-layout-flow.wp-block-group-is-layout-flow {
+    margin-top: 0px;
+}
+
+/****************Adjust space above footer slider***********************/
+
+div#metaslider_47 div.caption-wrap > div.caption {
+    padding-top: 20px;
+    padding-right: 0px;
+    width: 100%;
+}
+
+/******************Force color for image center box on signature image home page, color gets lost when image is changed*******************************/
+
+div.sj-img-center-box.sj-box-light > p.has-text-align-center {
+    color: var(--wp--preset--color--main);
+}
+
+
+
+
+/* ======================
+   MetaSlider Overlay
+   Button Wrapper
+   Injected via slider.js
+   ====================== */
+
+/* Wrapper covers entire slider */
+#metaslider-id-105 .sj-slider-btn-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    z-index: 20;
+    margin: 0;
+    padding: 0;
+    background: transparent;
+}
+
+/* Re-enable pointer events on 
+   everything inside the wrapper */
+#metaslider-id-105 .sj-slider-btn-wrapper * {
+    pointer-events: all;
+}
+
+/* Button group — vertical stack 
+   like Burrito Bowl */
+#metaslider-id-105 .sj-banner-btn-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* Primary button — green */
+#metaslider-id-105 .sj-banner-btn-primary {
+    display: inline-block;
+    font-family: var(--wp--preset--font-family--secondary);
+    font-size: var(--wp--preset--font-size--base);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    text-decoration: none;
+    color: #FFFFFF;
+    background: linear-gradient(
+        180deg,
+        #007A42 0%,
+        #006838 100%
+    );
+    padding: 0.85em 3em;
+    border: none;
+    border-radius: 0;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    white-space: nowrap;
+    min-width: 280px;
+    text-align: center;
+}
+
+#metaslider-id-105 .sj-banner-btn-primary:hover {
+    background: linear-gradient(
+        180deg,
+        #006838 0%,
+        #005a30 100%
+    );
+    color: #FFFFFF;
+    text-decoration: none;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 104, 56, 0.4);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    #metaslider-id-105 .sj-banner-btn-primary {
+        min-width: 200px;
+        font-size: 0.8rem;
+        padding: 0.75em 1.5em;
+    }
+}
+
+
+/***********Removed menu area header h3 for mobile and pushed mobile menu to right******************/
+
+@media screen and (max-width: 768px) {
+
+    div.sj-header-center h3.wp-block-heading {
+    display: none;
+}
+
+nav.has-small-font-size.is-responsive.items-justified-center.wp-block-navigation.is-content-justification-center.is-layout-flex.wp-block-navigation-is-layout-flex {
+    align-self: flex-end;
+}
+
+}
+
+/*******************Adjust width of order now and connect with us buttons via clamp*********************************/
+
+div.sj-img-center-box.sj-box-light {
+    width: clamp(100px, 60%, 350px);
+}
+
+/********************Adding padding below social icons********************/
+
+@media screen and (min-width: 782px) {
+
+    ul.wp-block-social-links {
+    padding-bottom: 1em;
+}
+
+}
+
+/*****************Made logo width responsive********************/
+
+.wp-block-site-logo {
+    width: clamp(150px, 33vw, 260px);
+}
+
+
+/* Online orders notice */
+.sj-orders-notice {
+    display: block;
+    font-family: var(--wp--preset--font-family--secondary);
+    font-size: var(--wp--preset--font-size--x-small);
+    font-weight: 600;
+    color: var(--wp--preset--color--sj-green);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-top: 4px;
+}
+
+
+
+/*****flex-basis: 100% forces the notice span to take the full width of the flex container — pushing it to its own line while the hours and status stay on the line above****/
+
+.sj-orders-notice {
+    flex-basis: 100%;
+    width: 100%;
+}
+
+/* Orders notice — separate block element */
+.sj-orders-notice {
+    display: block;
+    width: 100%;
+    text-align: right;
+    font-family: var(--wp--preset--font-family--secondary);
+    font-size: var(--wp--preset--font-size--x-small);
+    font-weight: 600;
+    color: var(--wp--preset--color--sj-green);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-top: 4px;
+}
+
+
+/***********Remove margin above patty pic***********/
+
+div.sj-patty-pic {
+    margin-top: 0px;
+}
+
+
+
+/* ======================
+   Simply Jerk Menu Page
+   Restaurant menu layout
+   with dotted leaders
+   ====================== */
+
+/* Section wrapper */
+.sj-menu-section {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: var(--wp--preset--spacing--large) var(--wp--preset--spacing--medium);
+}
+
+/* Category heading */
+.sj-menu-category {
+    font-family: var(--wp--preset--font-family--secondary) !important;
+    font-size: var(--wp--preset--font-size--small) !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.2em !important;
+    color: var(--wp--preset--color--sj-green) !important;
+    border-bottom: 1px solid var(--wp--preset--color--border-light);
+    padding-bottom: var(--wp--preset--spacing--small);
+    margin-bottom: var(--wp--preset--spacing--medium) !important;
+    margin-top: var(--wp--preset--spacing--large) !important;
+}
+
+.sj-menu-category:first-child {
+    margin-top: 0 !important;
+}
+
+/* Menu item row */
+.sj-menu-item {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--wp--preset--spacing--medium);
+    margin-bottom: var(--wp--preset--spacing--large);
+    padding-bottom: var(--wp--preset--spacing--medium);
+}
+
+/* Item image */
+.sj-menu-item-image {
+    flex-shrink: 0;
+    width: 120px;
+    height: 120px;
+}
+
+.sj-menu-item-image img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+}
+
+/* Item content */
+.sj-menu-item-content {
+    flex: 1;
+    min-width: 0;
+}
+
+/* Item header — name, dots, price */
+.sj-menu-item-header {
+    display: flex;
+    align-items: baseline;
+    gap: 0;
+    width: 100%;
+    margin-bottom: 6px;
+}
+
+/* Item name */
+.sj-menu-item-name {
+    font-family: var(--wp--preset--font-family--primary);
+    font-size: var(--wp--preset--font-size--base);
+    font-weight: 500;
+    color: var(--wp--preset--color--main);
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+/* Dotted leader line */
+.sj-menu-item-dots {
+    flex: 1;
+    border-bottom: 2px dotted var(--wp--preset--color--border-light);
+    margin: 0 8px;
+    margin-bottom: 4px;
+    min-width: 20px;
+}
+
+/* Item price */
+.sj-menu-item-price {
+    font-family: var(--wp--preset--font-family--primary);
+    font-size: var(--wp--preset--font-size--base);
+    font-weight: 600;
+    color: var(--wp--preset--color--main);
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+/* Item description */
+.sj-menu-item-desc {
+    font-family: var(--wp--preset--font-family--secondary);
+    font-size: var(--wp--preset--font-size--small);
+    color: var(--wp--preset--color--secondary);
+    line-height: var(--wp--custom--line-height--body);
+    margin: 0 0 8px 0 !important;
+}
+
+/* Item badges */
+.sj-menu-item-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 6px;
+}
+
+/* Badge base style */
+.sj-menu-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-family: var(--wp--preset--font-family--secondary);
+    font-size: 0.7rem;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 100px;
+    border: 1px solid currentColor;
+}
+
+/* Badge variants */
+.sj-badge-vegetarian {
+    color: #2d7a2d;
+    border-color: #2d7a2d;
+    background-color: rgba(45, 122, 45, 0.05);
+}
+
+.sj-badge-vegetarian::before {
+    content: '∅';
+    font-size: 0.8rem;
+}
+
+.sj-badge-halal {
+    color: var(--wp--preset--color--sj-green);
+    border-color: var(--wp--preset--color--sj-green);
+    background-color: rgba(0, 104, 56, 0.05);
+}
+
+.sj-badge-special {
+    color: var(--wp--preset--color--sj-yellow);
+    border-color: var(--wp--preset--color--sj-chilli);
+    background-color: rgba(254, 191, 1, 0.1);
+    color: #856a00;
+}
+
+.sj-badge-spicy {
+    color: #cc2200;
+    border-color: #cc2200;
+    background-color: rgba(204, 34, 0, 0.05);
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .sj-menu-item {
+        gap: var(--wp--preset--spacing--small);
+    }
+
+    .sj-menu-item-image {
+        width: 60px;
+        height: 60px;
+    }
+
+    .sj-menu-item-image img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .sj-menu-item-name,
+    .sj-menu-item-price {
+        font-size: var(--wp--preset--font-size--small) !important;
+    }
+
+    .sj-menu-section {
+        padding: var(--wp--preset--spacing--medium) var(--wp--preset--spacing--small);
+    }
+}
+
+
+
+/* ======================
+   Menu Page Navigation
+   Sticky category nav
+   ====================== */
+
+.sj-menu-nav {
+    position: sticky;
+    top: 0px;
+    z-index: 100;
+    background-color: #FFFFFF;
+    border-bottom: 2px solid var(--wp--preset--color--sj-green);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    width: 100%;
+}
+
+/* Horizontally scrollable inner container */
+.sj-menu-nav-inner {
+    display: flex;
+    flex-direction: row;
+    gap: 0;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; /* Firefox */
+    padding: 0 var(--wp--preset--spacing--medium);
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Hide scrollbar on webkit */
+.sj-menu-nav-inner::-webkit-scrollbar {
+    display: none;
+}
+
+/* Nav links */
+.sj-menu-nav-link {
+    flex-shrink: 0;
+    display: inline-block;
+    padding: 1rem 1.25rem;
+    font-family: var(--wp--preset--font-family--secondary);
+    font-size: var(--wp--preset--font-size--small);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--wp--preset--color--main);
+    text-decoration: none;
+    border-bottom: 3px solid transparent;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+
+.sj-menu-nav-link:hover {
+    color: var(--wp--preset--color--sj-green);
+    border-bottom-color: var(--wp--preset--color--sj-green);
+    text-decoration: none;
+}
+
+/* Active state — set by JavaScript */
+.sj-menu-nav-link.is-active {
+    color: var(--wp--preset--color--sj-green);
+    border-bottom-color: var(--wp--preset--color--sj-green);
+}
+
+/* Scroll offset for sticky nav — 
+   prevents heading disappearing under nav */
+.sj-menu-category {
+    scroll-margin-top: 70px;
+}
+
+/* Mobile — smaller padding */
+@media (max-width: 768px) {
+    .sj-menu-nav-link {
+        padding: 0.75rem 1rem;
+        font-size: 0.7rem;
+    }
+}
+
+
+/* ======================
+   Menu Category Header
+   with Order Online link
+   ====================== */
+
+/* Wrapper for heading + order button */
+.sj-menu-category-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--wp--preset--color--border-light);
+    padding-bottom: var(--wp--preset--spacing--small);
+    margin-bottom: var(--wp--preset--spacing--medium);
+    margin-top: var(--wp--preset--spacing--large);
+    gap: 1rem;
+    scroll-margin-top: 70px;
+}
+
+.sj-menu-category-header:first-child {
+    margin-top: 0;
+}
+
+/* Move scroll target to wrapper */
+.sj-menu-category-header[id] {
+    scroll-margin-top: 70px;
+}
+
+/* Override margin on heading inside wrapper */
+.sj-menu-category-header .sj-menu-category {
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+/* Order Online button on category */
+.sj-menu-order-link {
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-family: var(--wp--preset--font-family--secondary);
+    font-size: var(--wp--preset--font-size--x-small);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #FFFFFF;
+    background-color: var(--wp--preset--color--sj-green);
+    padding: 0.4em 1em;
+    border-radius: 2px;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+    white-space: nowrap;
+    margin-left: 1em;
+}
+
+.sj-menu-order-link:hover {
+    background-color: var(--wp--preset--color--sj-green-light);
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.sj-menu-order-link .fa-solid {
+    font-size: 0.8em;
+}
+
+/* Mobile — hide button text, show icon only */
+@media (max-width: 480px) {
+
+    .sj-menu-order-link {
+        padding: 0.5em 0.7em;
+    }
+}
+
+
+.sj-menu-nav-inner {
+    cursor: grab;
+}
+
+.sj-menu-nav-inner:active {
+    cursor: grabbing;
+}
+
+
+/* Arrow layout fix */
+.sj-menu-nav {
+    display: flex !important;
+    align-items: stretch;
+}
+
+
+/* ======================
+   Item-level Order button
+   Matches category button style
+   ====================== */
+
+.sj-item-order-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-family: var(--wp--preset--font-family--secondary);
+    font-size: var(--wp--preset--font-size--x-small);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #FFFFFF;
+    background-color: var(--wp--preset--color--sj-green);
+    padding: 0.4em 1em;
+    border-radius: 2px;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+    white-space: nowrap;
+}
+
+.sj-item-order-link:hover {
+    background-color: var(--wp--preset--color--sj-green-light);
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.sj-item-order-link .fa-solid {
+    font-size: 0.8em;
+}
+
+
+/* ======================
+   Catering notice box
+   ====================== */
+.sj-catering-notice {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    background-color: rgba(0, 104, 56, 0.08);
+    border-left: 4px solid var(--wp--preset--color--sj-green);
+    padding: var(--wp--preset--spacing--medium);
+    margin-bottom: var(--wp--preset--spacing--medium);
+}
+
+.sj-catering-notice .fa-solid {
+    color: var(--wp--preset--color--sj-green);
+    font-size: 1.2rem;
+    margin-top: 2px;
+    flex-shrink: 0;
+}
+
+.sj-catering-notice-text strong {
+    display: block;
+    font-family: var(--wp--preset--font-family--secondary);
+    font-size: var(--wp--preset--font-size--base);
+    font-weight: 700;
+    color: var(--wp--preset--color--sj-green);
+    margin-bottom: 4px;
+}
+
+.sj-catering-notice-text p {
+    margin: 0;
+    font-size: var(--wp--preset--font-size--small);
+    color: var(--wp--preset--color--main);
+}
+
+.sj-catering-cta {
+    text-align: center;
+    margin-bottom: var(--wp--preset--spacing--large);
+}
+
+
+/*****************Styling our story box on About Us page*********************************/
+
+body.page-id-315 p.has-text-align-center.sj-our-story-center-text.has-large-font-size {
+    display: inline-block;
+    font-family: var(--wp--preset--font-family--secondary);
+    font-size: var(--wp--preset--font-size--base);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    text-decoration: none;
+    color: #FFFFFF;
+    background: linear-gradient(
+        180deg,
+        #007A42 0%,
+        #006838 100%
+    );
+    padding: 0.85em 3em;
+    border: none;
+    border-radius: 0;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    white-space: nowrap;
+    min-width: 280px;
+    text-align: center;
+}
+
+body.page-id-315 .wp-block-group.sj-our-story-center-box.has-global-padding.is-layout-constrained.wp-block-group-is-layout-constrained {
+    display: flex;
+}
+
+
+/***********Stylizing testimonials on Our Story page************/
+
+body.page-id-315 p.sj-testimonial-number.has-primary-font-family {
+    transform: scaleY(2.5);
+}
+
+body.page-id-315 .wp-block-columns.sj-customer-words.is-layout-flex.wp-block-columns-is-layout-flex {
+    column-gap: 0px;
+}
+
+@media screen and (min-width: 781px) {
+
+    body.page-id-315 p.sj-testimonial-number::after {
+        position: absolute;
+        content: '';
+        top: 30%;
+        bottom: 0;
+        left: 50%;
+        height: 50%;
+        background-color: var(--wp--preset--color--sj-chilli) !important;
+        width: 1px;
+        background-image: radial-gradient(var(--wp--preset--color--sj-chilli) 1px, transparent 1px);
+        background-size: 10px 10px;
+}
+
+}
+
+@media screen and (max-width: 781px) {
+
+    body.page-id-315 div.sj-number-column {
+    display: none;
+}
+
+}
+
+
+/***************Remove errant p tag on Our Story page************/
+
+body.page-id-315 #wp--skip-link--target > div.entry-content > p:only-of-type {
+    display: none;
+}
+
+/* Words from the Jerk Gang heading */
+.sj-script-heading {
+    font-family: var(--wp--preset--font-family--script);
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 400;
+    color: #FFFFFF;
+    line-height: 1.2;
+    text-align: center;
+}
+
+
+
