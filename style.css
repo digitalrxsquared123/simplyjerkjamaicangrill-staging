@@ -785,12 +785,14 @@ div.sj-patty-pic {
 
 .sj-menu-nav {
     position: sticky;
+    position: -webkit-sticky; /* Safari fix */
     top: 0px;
     z-index: 100;
     background-color: #FFFFFF;
     border-bottom: 2px solid var(--wp--preset--color--sj-green);
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
     width: 100%;
+    will-change: transform;
 }
 
 /* Horizontally scrollable inner container */
